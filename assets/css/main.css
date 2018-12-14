@@ -134,10 +134,7 @@ body {
   padding: 66px 0 44px 0;
 }
 .row-alt {
-  background: #cbe2c1;
-  background: -webkit-linear-gradient(to right, #a1d3b0, #f6f1d3);
-  background:    -moz-linear-gradient(to right, #a1d3b0, #f6f1d3);
-  background:         linear-gradient(to right, #a1d3b0, #f6f1d3);
+  background: #d5f2ed;
   padding: 44px 0 22px 0;
 }
 
@@ -351,21 +348,29 @@ p a {
 
 /*
   ========================================
-  Speakers
+  Articles
   ========================================
 */
 
-.speaker {
+.article {
   margin-bottom: 44px;
+  background: #dcf1ed;
+  color: #888;
 }
-.speaker-info {
+
+.article p {
+  font-size: 21px;
+  line-height: 33px;
+}
+
+.article-info {
   border: 1px solid #dfe2e5;
   border-radius: 5px;
   margin-top: 88px;
   padding-bottom: 22px;
   text-align: center;
 }
-.speaker-info img {
+.article-info img {
   border-radius: 50%;
   height: 130px;
   margin: -66px 0 22px 0;
