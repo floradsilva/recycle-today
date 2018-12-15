@@ -387,7 +387,7 @@ p a {
   margin-bottom: 44px;
   background: #dcf1ed;
   color: #888;
-  text-align: center;
+  /*text-align: center;*/
   font: 300 16px/22px "Lato", "Open Sans ", "Helvetica Neue", Helvetica, Arial Narrow, sans-serif;
 }
 
@@ -401,8 +401,8 @@ p a {
 }
 
 .donate label {
-  font-size: 30px;
-  text-transform: uppercase;
+  font-size: 20px;
+  text-transform: capitalize;
   font-weight: bold;
 }
 
@@ -411,28 +411,51 @@ p a {
 }
 
 .donate input {
-  margin-bottom: 50px;
 }
 
-.donate-info {
-  border: 1px solid #dfe2e5;
+.register-group label {
+  color: #648880;
+  font-weight: 400;
+  display: block;
+  margin-left: 20px;
+  /*font-size: 20px;*/
+}
+
+.register-group input,
+.register-group select,
+.register-group textarea {
+  border: 1px solid #c6c9cc;
   border-radius: 5px;
-  margin-top: 88px;
-  padding-bottom: 22px;
-  text-align: center;
+  color: #888;
+  display: block;
+  margin: 5px 0 27px 0;
+  padding: 5px 20px;
+
 }
-.donate-info img {
-  border-radius: 50%;
-  height: 130px;
-  margin: -66px 0 22px 0;
-  vertical-align: top;
+
+.inner {
+  padding-left: 400px;
+  padding-bottom: 50px;
 }
+
+.submit {
+  display: block;
+  margin-left: 100px;
+}
+
+/*
+  ========================================
+  Clothes
+  ========================================
+
+
+
 
 /*
   ========================================
   Venue
   ========================================
-*/
+
 
 .venue-theatre {
   margin-bottom: 66px;
@@ -465,7 +488,7 @@ textarea {
   font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.register-group label {
+/*.register-group label {
   color: #648880;
   cursor: pointer;
   font-weight: 400;
@@ -491,7 +514,7 @@ textarea {
 .register-group textarea {
   height: 78px;
 }
-
+*/
 
 /*
   ========================================

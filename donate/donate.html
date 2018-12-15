@@ -34,14 +34,14 @@
 		</header>
 		<section class="row-alt">
 			<div class="lead container">
-				<h1>Select An Item to Donate</h1>
+				<!-- <h1>Select An Item to Donate</h1> -->
 				<!-- <p>Please select an item you wish to donate</p> -->
 			</div>
 		</section>
 		<section>
-			<section>
-				<div class="donate">
-					<form action="category/clothes.html" method="get" target="_blank">
+			<div class="donate">
+				<section class="inner">
+					<form action="#" method="post">
 						<fieldset>
 							<label>
 								Select Category:	
@@ -52,10 +52,41 @@
 								</select>
 							</label>
 						</fieldset>
-						<input class="btn btn-default" type="submit" value="Submit">
+						<fieldset class="register-group">						
+							<label>
+							Number of Items To Donate:
+							<input type="number" name="quantity" placeholder="Number of items to donate" required>
+							</label>
+
+							<label>
+							Name:
+							<input type="text" name="name" placeholder="Full name" required>
+							</label>
+
+							<label>
+							Email:
+							<input type="email" name="email" placeholder="Email address" required>
+							</label>
+
+							<label>
+							Contact:
+							<input type="text" name="email" placeholder="Contact No." required>
+							</label>
+
+							<label>
+							Pick Up Address:
+							<textarea name="address"></textarea>
+							</label>
+
+							<label>
+							Comments:
+							<textarea name="comments"></textarea>
+							</label>
+						</fieldset>
+						<input class="submit btn btn-default" type="submit" value="Submit">
 					</form>
-				</div>
-			</section>
+				</section>
+			</div>
 		</section>
 		<footer class="primary-footer container group">
 			<small>&copy;Recycle Today</small>
