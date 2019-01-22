@@ -33,41 +33,59 @@
 				</ul>
 			</nav>
 		</header>
-		<section class="row">
-			<div class="grid">
-				<!-- Articles -->
-				<section class="teaser col-1-3">
-					<a href="./articles/articles.html">
-						<img src="assets/images/articles-small.jpeg" alt="Interesting Articles">
-						<h3>Articles</h3>
-					</a>
-					<p>Interesting articles on Recycling and more...</p>
-				</section><!-- Link to the Donate Section --><section class="teaser col-1-3">
-					<a href="donate/donate.html">
-						<img src="assets/images/donate-small.jpeg" alt="Donate">
-						<h3>Donate</h3>
-					</a>
-					<p>Donate used and unused items here.</p>
-				</section><!-- Link to the PickMe Section --><section class="teaser col-1-3">
-					<a href="pickme/pickme.html">
-						<img src="assets/images/articles-small2.jpeg" alt="Pick Me">
-						<h3>Pick Items</h3>
-					</a>
-					<p>Store to pick or buy second hand items.</p>
-				</section>
-
-				<!-- News Feed and Advertisements -->
-				<!-- <section></section> -->
-
-				<!-- Link to the Buy Section -->
-				<!-- <section></section> -->
-
-				<!-- Link to the Sell Section -->
-				<!-- <section></section> -->
-
-
+		<?php if(isset($_POST['form_submitted'])): ?>
+		<section class="row-alt">
+			<div class="lead container">
+			<h2> Thank you for the message <?php echo ucfirst($_POST['name']); ?>. We will get back to you soon.</h2>
 			</div>
 		</section>
+			<?php 
+				$to_email = 'dsilvaflora2@gmail.com';
+				$subject = $_POST['subject'];
+				$message = $_POST['message'];
+				$headers = 'From:'.$_POST['email'];
+				mail($to_email, $subject, $message, $headers);
+				$_POST = array(); 
+			?>
+		<?php else: ?>
+		<section>
+			<div class="donate">
+				<section class="inner">
+					<form action="#" method="post">
+						<fieldset class="register-group">						
+							<label>
+							Name:
+							<input type="text" name="name" placeholder="Full name" required>
+							</label>
+
+							<label>
+							Email:
+							<input type="email" name="email" placeholder="Email address" required>
+							</label>
+
+							<label>
+							Contact:
+							<input type="text" name="contact" placeholder="Contact No.">
+							</label>
+
+							<label>
+							Subject:
+							<input type="text" name="subject" required placeholder="Subject">
+							</label>
+
+							<label>
+							Message:
+							<textarea name="message"></textarea>
+							</label>
+
+							<input type="hidden" name="form_submitted" value="1">
+						</fieldset>
+						<input class="submit btn btn-default" type="submit" value="Submit">
+					</form>
+				</section>
+			</div>
+		</section>
+		<?php endif; ?>
 		<footer class="primary-footer container group">
 			<small>&copy;Recycle Today</small>
 			<nav class="nav">
